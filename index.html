@@ -14,6 +14,7 @@
     --face-dark: #6b7a8f;      /* Bezel.faceDark rgb(0.42, 0.48, 0.56) */
     --rim: rgba(255, 255, 255, 0.35);
     --edge: rgba(0, 0, 0, 0.55);
+    --key-top: #333333; --key-bottom: #1c1c1c; --key-edge: #0a0a0a; --key-text: #f2f2f2;   /* Bezel.key* */
     --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
   }
   * { box-sizing: border-box; }
@@ -39,18 +40,21 @@
   .tag { font-size: 11px; letter-spacing: 0.18em; font-weight: 600; margin: 0; }
   nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 22px 0 6px; }
   nav a {
-    display: inline-block; min-width: 108px; padding: 11px 16px; text-align: center; text-decoration: none;
-    font-size: 12px; font-weight: 700; letter-spacing: 0.14em; color: #e6e6e6;
-    background: linear-gradient(#333, #1f1f1f); border: 1px solid #111; border-radius: 8px;
-    box-shadow: 0 2px 2px rgba(0,0,0,0.5);
+    display: inline-flex; align-items: center; justify-content: center; width: 86px; height: 40px; padding: 2px;
+    text-align: center; text-decoration: none; line-height: 1.15;
+    font-family: ui-rounded, "SF Pro Rounded", system-ui, -apple-system, sans-serif;
+    font-size: 11px; font-weight: 700; color: var(--key-text);
+    background: linear-gradient(var(--key-top), var(--key-bottom)); border: 1px solid var(--key-edge); border-radius: 6px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.5);
   }
   nav a:active { transform: scale(0.96); }
   section { padding-top: 26px; }
   h2 { font-size: 15px; letter-spacing: 0.18em; font-weight: 700; margin: 0 0 12px; border-bottom: 1px solid rgba(41,48,57,0.35); padding-bottom: 8px; box-shadow: 0 1px 0 var(--rim); --d: 0.6px; }
   h3 { font-size: 12px; letter-spacing: 0.12em; font-weight: 700; margin: 20px 0 6px; --d: 0.5px; }
-  p, li { font-size: 13px; line-height: 1.65; margin: 0 0 10px; --d: 0.5px; }
+  p, li { font-size: 13px; line-height: 1.65; margin: 0 0 10px; color: #000; }
+  .tag, .meta, footer { color: #000; }
   ul { padding-left: 18px; margin: 0 0 10px; }
-  a { color: var(--ink); }
+  a { color: #000; }
   .meta { font-size: 11px; letter-spacing: 0.08em; opacity: 0.85; }
   footer { text-align: center; margin-top: 36px; font-size: 11px; letter-spacing: 0.16em; font-weight: 600; }
 </style>
@@ -59,65 +63,65 @@
 <main>
   <header>
     <h1 class="stamp">FMGS-A320</h1>
-    <p class="tag stamp">A320-TYPE FMGS / MCDU TRAINER</p>
+    <p class="tag">A320-TYPE FMGS / MCDU TRAINER</p>
     <nav>
-      <a href="#privacy">PRIVACY</a>
-      <a href="#terms">TERMS</a>
+      <a href="#privacy">PRIVACY<br>POLICY</a>
+      <a href="#terms">TERMS<br>OF USE</a>
       <a href="#support">SUPPORT</a>
     </nav>
   </header>
 
   <section id="privacy">
     <h2 class="stamp">PRIVACY POLICY</h2>
-    <p class="meta stamp">Last updated: 25 September 2026</p>
-    <p class="stamp">FMGS-A320 (the “app”) is published by ADDIE OÜ, Estonia (“we”, “us”). This policy explains what happens to information when you use the app.</p>
+    <p class="meta">Last updated: 25 September 2026</p>
+    <p>FMGS-A320 (the “app”) is published by ADDIE OÜ, Estonia (“we”, “us”). This policy explains what happens to information when you use the app.</p>
     <h3 class="stamp">NO DATA COLLECTED</h3>
-    <p class="stamp">The app does not collect, store on a server, share or sell any personal data. It has no user accounts, no analytics, no advertising and no tracking, and it does not connect to any server of ours: all functions work offline on your device.</p>
+    <p>The app does not collect, store on a server, share or sell any personal data. It has no user accounts, no analytics, no advertising and no tracking, and it does not connect to any server of ours: all functions work offline on your device.</p>
     <h3 class="stamp">WHAT STAYS ON YOUR DEVICE</h3>
     <ul>
-      <li class="stamp">The FMS standard you select (Thales or Honeywell) is saved on your device so that it is offered again at the next start.</li>
-      <li class="stamp">Flight plans, weights, winds and other data you type into the trainer are held in memory only while the app runs.</li>
+      <li>The FMS standard you select (Thales or Honeywell) is saved on your device so that it is offered again at the next start.</li>
+      <li>Flight plans, weights, winds and other data you type into the trainer are held in memory only while the app runs.</li>
     </ul>
-    <p class="stamp">Deleting the app removes this information from your device.</p>
+    <p>Deleting the app removes this information from your device.</p>
     <h3 class="stamp">SUBSCRIPTIONS AND PAYMENTS</h3>
-    <p class="stamp">Subscriptions are sold and processed by Apple through the App Store. We do not receive your name, payment details or Apple Account information. The app checks your subscription status on your device with Apple’s StoreKit. Apple’s handling of purchase data is described in Apple’s own privacy policy.</p>
+    <p>Subscriptions are sold and processed by Apple through the App Store. We do not receive your name, payment details or Apple Account information. The app checks your subscription status on your device with Apple’s StoreKit. Apple’s handling of purchase data is described in Apple’s own privacy policy.</p>
     <h3 class="stamp">LINKS</h3>
-    <p class="stamp">Links on this page that lead to other websites open outside the app; those websites have their own privacy practices.</p>
+    <p>Links on this page that lead to other websites open outside the app; those websites have their own privacy practices.</p>
     <h3 class="stamp">CHILDREN</h3>
-    <p class="stamp">The app is not directed at children and collects no data from anyone.</p>
+    <p>The app is not directed at children and collects no data from anyone.</p>
     <h3 class="stamp">YOUR RIGHTS AND CONTACT</h3>
-    <p class="stamp">Because we hold no personal data about you, there is nothing for us to access, correct or delete. For any privacy question, or to exercise your rights under the EU General Data Protection Regulation, contact ADDIE OÜ at <a href="mailto:info@addieproject.eu">info@addieproject.eu</a>. You may also complain to the Estonian Data Protection Inspectorate (Andmekaitse Inspektsioon).</p>
-    <p class="stamp">If this policy changes, the new version is published here with a new date.</p>
+    <p>Because we hold no personal data about you, there is nothing for us to access, correct or delete. For any privacy question, or to exercise your rights under the EU General Data Protection Regulation, contact ADDIE OÜ at <a href="mailto:info@addieproject.eu">info@addieproject.eu</a>. You may also complain to the Estonian Data Protection Inspectorate (Andmekaitse Inspektsioon).</p>
+    <p>If this policy changes, the new version is published here with a new date.</p>
   </section>
 
   <section id="terms">
     <h2 class="stamp">TERMS OF USE</h2>
-    <p class="meta stamp">Last updated: 25 September 2026</p>
+    <p class="meta">Last updated: 25 September 2026</p>
     <h3 class="stamp">LICENCE</h3>
-    <p class="stamp">The app is licensed to you under Apple’s Standard Licensed Application End User License Agreement (<a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple Standard EULA</a>), together with these terms. ADDIE OÜ is the licensor.</p>
+    <p>The app is licensed to you under Apple’s Standard Licensed Application End User License Agreement (<a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple Standard EULA</a>), together with these terms. ADDIE OÜ is the licensor.</p>
     <h3 class="stamp">TRAINING USE ONLY</h3>
-    <p class="stamp">FMGS-A320 is a training aid for study and procedure practice. It must not be used for flight planning, navigation or any other operational purpose. Performance figures and predictions are approximate training values. The app is an independent product and is not affiliated with, endorsed by or licensed by any aircraft or equipment manufacturer; the aircraft type is named only to describe the interface being trained.</p>
+    <p>FMGS-A320 is a training aid for study and procedure practice. It must not be used for flight planning, navigation or any other operational purpose. Performance figures and predictions are approximate training values. The app is an independent product and is not affiliated with, endorsed by or licensed by any aircraft or equipment manufacturer; the aircraft type is named only to describe the interface being trained.</p>
     <h3 class="stamp">SUBSCRIPTIONS</h3>
     <ul>
-      <li class="stamp">Using the app requires an active auto-renewable subscription: Monthly (USD 12.00 per month) or Yearly (USD 100.00 per year). Prices in other currencies are shown by the App Store before purchase.</li>
-      <li class="stamp">Payment is charged to your Apple Account at confirmation of purchase.</li>
-      <li class="stamp">The subscription renews automatically unless it is cancelled at least 24 hours before the end of the current period; your account is charged for renewal within 24 hours before the end of the current period.</li>
-      <li class="stamp">You can manage or cancel the subscription in your Apple Account settings. Cancellation takes effect at the end of the current period.</li>
-      <li class="stamp">Refunds are handled by Apple under its own policies.</li>
+      <li>Using the app requires an active auto-renewable subscription: Monthly (USD 12.00 per month) or Yearly (USD 100.00 per year). Prices in other currencies are shown by the App Store before purchase.</li>
+      <li>Payment is charged to your Apple Account at confirmation of purchase.</li>
+      <li>The subscription renews automatically unless it is cancelled at least 24 hours before the end of the current period; your account is charged for renewal within 24 hours before the end of the current period.</li>
+      <li>You can manage or cancel the subscription in your Apple Account settings. Cancellation takes effect at the end of the current period.</li>
+      <li>Refunds are handled by Apple under its own policies.</li>
     </ul>
     <h3 class="stamp">LIABILITY</h3>
-    <p class="stamp">The app is provided “as is”. To the extent permitted by law, ADDIE OÜ is not liable for any loss arising from the use of the app, in particular from any use outside training.</p>
+    <p>The app is provided “as is”. To the extent permitted by law, ADDIE OÜ is not liable for any loss arising from the use of the app, in particular from any use outside training.</p>
   </section>
 
   <section id="support">
     <h2 class="stamp">SUPPORT</h2>
-    <p class="stamp">Questions, problems or suggestions: <a href="mailto:info@addieproject.eu">info@addieproject.eu</a>. Please include your device model, iOS version and the FMS standard you use.</p>
-    <p class="stamp">Subscription billing and refunds are handled by Apple: open your Apple Account settings or visit <a href="https://support.apple.com/billing">support.apple.com/billing</a>.</p>
+    <p>Questions, problems or suggestions: <a href="mailto:info@addieproject.eu">info@addieproject.eu</a>. Please include your device model, iOS version and the FMS standard you use.</p>
+    <p>Subscription billing and refunds are handled by Apple: open your Apple Account settings or visit <a href="https://support.apple.com/billing">support.apple.com/billing</a>.</p>
     <h3 class="stamp">PUBLISHER</h3>
-    <p class="stamp">ADDIE OÜ<br>Registry code 16927673<br>Tööstuse tn 75-71, Tallinn 10416, Estonia<br><a href="mailto:info@addieproject.eu">info@addieproject.eu</a></p>
+    <p>ADDIE OÜ<br>Registry code 16927673<br>Tööstuse tn 75-71, Tallinn 10416, Estonia<br><a href="mailto:info@addieproject.eu">info@addieproject.eu</a></p>
   </section>
 
-  <footer class="stamp">TRAINING USE ONLY · NOT FOR OPERATIONAL USE</footer>
+  <footer>TRAINING USE ONLY · NOT FOR OPERATIONAL USE</footer>
 </main>
 </body>
 </html>
